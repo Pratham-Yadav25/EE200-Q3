@@ -477,7 +477,7 @@ with tab2:
 
             batch_results.append({
                 "filename":   f.name,
-                "prediction": pred_name.replace(".mp3","").replace(".wav","").replace("_"," "),
+                "prediction": pred_name.rsplit(".", 1)[0],,
                 "votes":      pred_votes,
                 "confidence": f"{pred_conf:.1f}%",
             })
